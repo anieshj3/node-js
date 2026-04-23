@@ -1,0 +1,27 @@
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+// Ask first number
+rl.question("Enter first number: ", function(num1) {
+
+  // Ask second number
+  rl.question("Enter second number: ", function(num2) {
+
+    // Ask third number
+    rl.question("Enter third number: ", function(num3) {
+
+      // Convert to numbers and add all three
+      let sum = Number(num1) + Number(num2) + Number(num3);
+
+      console.log("Sum is: " + sum);
+
+      rl.close();
+    });
+
+  });
+
+});
